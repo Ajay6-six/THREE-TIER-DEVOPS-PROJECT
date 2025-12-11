@@ -1,10 +1,11 @@
 const express = require("express");
-//const cors = require("cors");
+const cors = require("cors");
 
 const app = express();
 
 // parse requests of content-type - application/json
 app.use(express.json());
+app.use(cors());              // allow all origins for now
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
