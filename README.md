@@ -1,6 +1,6 @@
 
 
-# Softify Multi‑Service DevOps Project
+# THREE-TIER-DevOps-Project
 
 Multi‑tier demo application containerized with Docker, orchestrated with Docker Compose, and deployed to a Kubernetes cluster (kubeadm on AWS). The app is a CRUD tutorial manager built with Angular frontend, Node/Express backend, MongoDB database, Redis cache, and Nginx reverse proxy. 
 
