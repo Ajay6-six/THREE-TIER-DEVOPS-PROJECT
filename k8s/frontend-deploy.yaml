@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ajayy47/frontend:latest
+          image: ajayy47/frontend:v2
           ports:
             - containerPort: 80
           readinessProbe:
