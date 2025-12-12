@@ -102,9 +102,6 @@ The `k8s/` directory contains manifests for a `simplyfi` namespace:
 - `mongo-deploy.yaml` – MongoDB Deployment + ClusterIP Service.  
 - `api-deploy.yaml` – API Deployment + ClusterIP Service using image `arun101010/softify-api:latest`.  
 - `frontend-deploy.yaml` – Frontend Deployment + ClusterIP Service using image `arun101010/softify-frontend:latest`.  
-- `redis-deploy.yaml` – Redis Deployment + ClusterIP Service.  
-- `reverse-proxy-config.yaml` – ConfigMap with Nginx reverse‑proxy `default.conf`.  
-- `reverse-proxy-deploy.yaml` – Reverse‑proxy Deployment + NodePort Service (port `30080`). 
 
 ### 1. Apply manifests
 
@@ -115,6 +112,8 @@ kubectl apply -n simplyfi -f k8s/mongo-config.yaml
 kubectl apply -n simplyfi -f k8s/mongo-secret.yaml
 kubectl apply -n simplyfi -f k8s/mongo-pvc.yaml
 kubectl apply -n simplyfi -f k8s/mongo-deploy.yaml
+kubectl apply -n simplyfi -f k8s/mongo-pv.yaml
+
 
 kubectl apply -n simplyfi -f k8s/api-deploy.yaml
 kubectl apply -n simplyfi -f k8s/frontend-nodeport.yaml
