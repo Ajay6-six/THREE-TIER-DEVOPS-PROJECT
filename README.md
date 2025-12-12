@@ -117,10 +117,9 @@ kubectl apply -n simplyfi -f k8s/mongo-pvc.yaml
 kubectl apply -n simplyfi -f k8s/mongo-deploy.yaml
 
 kubectl apply -n simplyfi -f k8s/api-deploy.yaml
-kubectl apply -n simplyfi -f k8s/redis-deploy.yaml
+kubectl apply -n simplyfi -f k8s/frontend-nodeport.yaml
 kubectl apply -n simplyfi -f k8s/frontend-deploy.yaml
-kubectl apply -n simplyfi -f k8s/reverse-proxy-config.yaml
-kubectl apply -n simplyfi -f k8s/reverse-proxy-deploy.yaml
+kubectl apply -n simplyfi -f k8s/api-nodeport.yaml
 ```
 
 Check resources:
