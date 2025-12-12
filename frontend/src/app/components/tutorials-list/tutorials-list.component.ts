@@ -9,10 +9,11 @@ import { TutorialService } from 'src/app/services/tutorial.service';
 })
 export class TutorialsListComponent implements OnInit {
 
-  tutorials?: Tutorial[];
+  tutorials: Tutorial[] = [];
   currentTutorial: Tutorial = {};
   currentIndex = -1;
   title = '';
+  page = 1;
 
   constructor(private tutorialService: TutorialService) { }
 
@@ -23,11 +24,11 @@ export class TutorialsListComponent implements OnInit {
   retrieveTutorials(): void {
     this.tutorialService.getAll()
       .subscribe({
-        next: (data) => {
+        next: (data: Tutorial[]) => {
           this.tutorials = data;
           console.log(data);
         },
-        error: (e) => console.error(e)
+        error: (e: any) => console.error(e)
       });
   }
 
@@ -45,26 +46,24 @@ export class TutorialsListComponent implements OnInit {
   removeAllTutorials(): void {
     this.tutorialService.deleteAll()
       .subscribe({
-        next: (res) => {
+        next: (res: any) => {
           console.log(res);
           this.refreshList();
         },
-        error: (e) => console.error(e)
+        error: (e: any) => console.error(e)
       });
   }
 
   searchTitle(): void {
-    this.currentTutorial = {};
-    this.currentIndex = -1;
+    this.page = 1;
 
     this.tutorialService.findByTitle(this.title)
       .subscribe({
-        next: (data) => {
+        next: (data: Tutorial[]) => {
           this.tutorials = data;
           console.log(data);
         },
-        error: (e) => console.error(e)
+        error: (e: any) => console.error(e)
       });
   }
-
 }
