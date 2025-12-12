@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: arun101010/softify-frontend:latest
+          image: ajayy47/frontend:latest
           ports:
             - containerPort: 80
           readinessProbe:
