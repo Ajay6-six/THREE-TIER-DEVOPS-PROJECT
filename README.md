@@ -32,7 +32,7 @@ Multi‑tier demo application containerized with Docker, orchestrated with Docke
 - Clone the repo:
 
 ```bash
-git clone https://github.com/10msnarun/softify.git
+git clone https://github.com/Ajay6-six/THREE-TIER-DEVOPS-PROJECT.git
 cd softify
 ```
 
